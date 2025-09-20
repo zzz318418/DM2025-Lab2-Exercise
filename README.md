@@ -79,6 +79,8 @@ Click "Fork" to copy it into your own GitHub account.
 
 And it will redirect you to a "copy" of the repository in your own account. Once in your account (check that your name shows up at the top left corner), click the green button "Code", and the clipboard button beside the **link** that pops up. 
 
+**Example from the previous lab:**
+
 ![gitpic3](./pics/gitpic3.png)
 
 ---
@@ -487,8 +489,8 @@ Check the `DM2025-Lab2-Homework.ipynb` file for all the details.
 Make sure to commit and push your changes to your GitHub repository __BEFORE the deadline for each phase__. During the second phase, the answers from the first phase will not be considered if they can not be pushed on time. For the third phase we will only consider the kaggle competition material for submission. 
 
 Make sure your repository must contains 2 notebooks and your competition report PDF, including: 
-1. `DM2025-Lab2-Master.ipynb` from [DM Lab 2 Master](https://github.com/leoson-wu/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Master.ipynb)
-2. `DM2025-Lab2-Homework.ipynb` from [DM Lab 2 Homework](https://github.com/leoson-wu/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Homework.ipynb)
+1. `DM2025-Lab2-Master.ipynb` from [DM Lab 2 Master](https://github.com/difersalest/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Master.ipynb)
+2. `DM2025-Lab2-Homework.ipynb` from [DM Lab 2 Homework](https://github.com/difersalest/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Homework.ipynb)
 3. `competition_report.pdf` (the name of the file is arbitrary, but it must say report).
 
 ![deadline](./pics/lab2_deadlines.png)
