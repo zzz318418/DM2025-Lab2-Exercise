@@ -1,0 +1,32 @@
+# LECTURE ANALYSIS: Data Sets
+## Video Segment: 110:58
+
+[SLIDE DESCRIPTION]
+Data Sets. A collection of data that is organized in certain formats. Structured data sets. Often in rows and columns, predictable structure. Unstructured data sets. More complex and varied. Are usually derived from human-generated content. E.g., text, images, videos.
+
+[TRANSCRIPT - 110:58]
+So the next one we want to talking about the data set. We have different type of data set. You might heard about the term called structured data or unstructured data. Structured data is you know exactly the meaning about the row and column. Unstructured data is they will change. Okay? Sometimes you don't really know how to interpret them. Currently that the human generate content such as image, text, video, we consider them as unstructured data. Luckily with this AI thing and right now text, image, video already can be converted them into structured format. But you still need to be able to know.
+
+[SLIDE DESCRIPTION]
+Characteristics of Data Sets. Dimensionality. Curse of Dimensionality. Sparsity. Only presence counts. Resolution. Patterns depend on the scale. Later.
+
+[TRANSCRIPT - 111:58]
+So we have different kind of characteristic of our data dimension we mentioned before. Sparsity comes from a key word called sparse. Sparse means very few. Like what we say that if you have the record in e-commerce store, like in Amazon. Because they have million of the records. But then you probably only buy 10 books before. So make your data in the million then become very sparse. So data are sparse. And sometimes in certain place, we will also talking about the resolution. And that part about sparsity, how to solving them, how to do the resolution, some of them will be in classification, some of them will be in the text mining.
+
+[SLIDE DESCRIPTION]
+Types of Data Sets. Data Matrix. Document Data. Transaction Data.
+
+[TRANSCRIPT - 112:58]
+We want to talk about different type of the data set. We have the data matrix, document data, transaction data. So data matrix look like this way.
+
+[SLIDE DESCRIPTION]
+Data Matrix. If each object has the same fixed set of numeric attributes. Price, Sells, # Reviews, # Readers. Book 1: 350, 1200, 20, 8. Book 2: 250, 21000, 36, 5. Book 3: 1200, 12000, 3, 5. Book 4: 350, 9000, 10, 7. Book 5: 450, 700, 1, 0. @Yi-Shin Chen, Data Mining. 29. Into a meaningful number. Okay, they can become data metric. And then we allow them to do the ratio operation. They are called data matrix. To make sure all the value inside need to become the ratio data. Okay. If it's not, then right here, they need to be ratio data.
+
+[SLIDE DESCRIPTION]
+Document Data. Usually unstructured and textual. Each document can be converted as a term vector. The value of each component is the number of times the corresponding term in the document. Before 2013. @Yi-Shin Chen, Data Mining. 33.
+
+[TRANSCRIPT - 113:48]
+And the document data is a part that we will talking about later because before 2013, this is before 2013. Okay. And the people actually utilize document data in a vector form. Right here. So they select important keyword in the document. And then after that, for every document, utilize those important keyword, we got some number, occurrence of the number for that keyword. We generate a something called term vector. So each one of them are become vector. So why vector? Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.
+
+[TRANSCRIPT - 114:48]
+But that is way we try to working on that before 2013. After 2013, how we try to do that? We will talking about that that in the text mining part. So maybe three weeks later.

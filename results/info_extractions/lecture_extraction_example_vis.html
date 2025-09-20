@@ -1,0 +1,221 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">key_concept</span> <span class="lx-label" style="background-color:#C8E6C9;">practical_insight</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        # LECTURE ANALYSIS: Data Sets
+## Video Segment: 110:58
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">Data Sets. A collection of data that is organized in certain formats. Structured data sets. Often in rows and columns, predictable structure. Unstructured data sets. More complex and varied. Are usually derived from human-generated content. E.g., text, images, videos.</span>
+
+[TRANSCRIPT - 110:58]
+So the next one we want to talking about the data set. We have different type of data set. You might heard about the term called structured data or unstructured data. <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">Structured data is you know exactly the meaning about the row and column. Unstructured data is they will change. Okay? Sometimes you don&#x27;t really know how to interpret them. Currently that the human generate content such as image, text, video, we consider them as unstructured data.</span> <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">Luckily with this AI thing and right now text, image, video already can be converted them into structured format. But you still need to be able to know.</span>
+
+[SLIDE DESCRIPTION]
+Characteristics of Data Sets. <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">Dimensionality. Curse of Dimensionality. Sparsity. Only presence counts. Resolution. Patterns depend on the scale. Later.</span>
+
+[TRANSCRIPT - 111:58]
+So we have different kind of characteristic of our data dimension we mentioned before. <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">Sparsity comes from a key word called sparse. Sparse means very few. Like what we say that if you have the record in e-commerce store, like in Amazon. Because they have million of the records. But then you probably only buy 10 books before. So make your data in the million then become very sparse.</span> So data are sparse. And sometimes in certain place, we will also talking about the resolution. <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">And that part about sparsity, how to solving them, how to do the resolution, some of them will be in classification, some of them will be in the text mining.</span>
+
+[SLIDE DESCRIPTION]
+Types of Data Sets. <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">Data Matrix. Document Data. Transaction Data.</span>
+
+[TRANSCRIPT - 112:58]
+We want to talk about different type of the data set. We have the data matrix, document data, transaction data. So data matrix look like this way.
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">Data Matrix. If each object has the same fixed set of numeric attributes. Price, Sells, # Reviews, # Readers. Book 1: 350, 1200, 20, 8. Book 2: 250, 21000, 36, 5. Book 3: 1200, 12000, 3, 5. Book 4: 350, 9000, 10, 7. Book 5: 450, 700, 1, 0. @Yi-Shin Chen, Data Mining. 29. Into a meaningful number. Okay, they can become data metric. And then we allow them to do the ratio operation. They are called data matrix. To make sure all the value inside need to become the ratio data. Okay. If it&#x27;s not, then right here, they need to be ratio data.</span>
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">Document Data. Usually unstructured and textual. Each document can be converted as a term vector. The value of each component is the number of times the corresponding term in the document. Before 2013. @Yi-Shin Chen, Data Mining. 33.</span>
+
+[TRANSCRIPT - 113:48]
+And the document data is a part that we will talking about later because before 2013, this is before 2013. Okay. And the people actually utilize document data in a vector form. Right here. So they select important keyword in the document. And then after that, for every document, utilize those important keyword, we got some number, occurrence of the number for that keyword. We generate a something called <span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">term vector. So each one of them are become vector. So why vector? <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.</span></span>
+
+[TRANSCRIPT - 114:48]
+But that is way we try to working on that before 2013. After 2013, how we try to do that? We will talking about that that in the text mining part. So maybe three weeks later.
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="10" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/11</span> |
+          Pos <span id="posInfo">[76-344]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "key_concept", "text": "Data Sets. A collection of data that is organized in certain formats. Structured data sets. Often in rows and columns, predictable structure. Unstructured data sets. More complex and varied. Are usually derived from human-generated content. E.g., text, images, videos.", "color": "#D2E3FC", "startPos": 76, "endPos": 344, "beforeText": "# LECTURE ANALYSIS: Data Sets\n## Video Segment: 110:58\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Data Sets. A collection of data that is organized in certain formats. Structured data sets. Often in rows and columns, predictable structure. Unstructured data sets. More complex and varied. Are usually derived from human-generated content. E.g., text, images, videos.", "afterText": "\n\n[TRANSCRIPT - 110:58]\nSo the next one we want to talking about the data set. We have different type of data set. You might heard about the term call", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Data Sets</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A collection of data that is organized in certain formats. Structured data sets are often in rows and columns with a predictable structure. Unstructured data sets are more complex and varied, usually derived from human-generated content like text, images, and videos.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data Sets are organized collections of information. Structured data is like a spreadsheet with clear rows and columns, while unstructured data is more free-form, like text or images.</span>}</div>"}, {"index": 1, "class": "key_concept", "text": "Structured data is you know exactly the meaning about the row and column. Unstructured data is they will change. Okay? Sometimes you don't really know how to interpret them. Currently that the human generate content such as image, text, video, we consider them as unstructured data.", "color": "#D2E3FC", "startPos": 535, "endPos": 817, "beforeText": "e want to talking about the data set. We have different type of data set. You might heard about the term called structured data or unstructured data. ", "extractionText": "Structured data is you know exactly the meaning about the row and column. Unstructured data is they will change. Okay? Sometimes you don&#x27;t really know how to interpret them. Currently that the human generate content such as image, text, video, we consider them as unstructured data.", "afterText": " Luckily with this AI thing and right now text, image, video already can be converted them into structured format. But you still need to be able to kn", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Structured vs. Unstructured Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Structured data has a predictable format (rows and columns), while unstructured data is more varied and complex, often derived from human content like images and text.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Structured data is neat and organized (like a table), while unstructured data is messy and varied (like a collection of photos and documents).</span>}</div>"}, {"index": 2, "class": "practical_insight", "text": "Luckily with this AI thing and right now text, image, video already can be converted them into structured format. But you still need to be able to know.", "color": "#C8E6C9", "startPos": 818, "endPos": 970, "beforeText": "don&#x27;t really know how to interpret them. Currently that the human generate content such as image, text, video, we consider them as unstructured data. ", "extractionText": "Luckily with this AI thing and right now text, image, video already can be converted them into structured format. But you still need to be able to know.", "afterText": "\n\n[SLIDE DESCRIPTION]\nCharacteristics of Data Sets. Dimensionality. Curse of Dimensionality. Sparsity. Only presence counts. Resolution. Patterns depe", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Unstructured Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">AI is enabling the conversion of unstructured data (text, images, video) into structured formats, but understanding the original data is still crucial.</span>}</div>"}, {"index": 3, "class": "key_concept", "text": "Dimensionality. Curse of Dimensionality. Sparsity. Only presence counts. Resolution. Patterns depend on the scale. Later.", "color": "#D2E3FC", "startPos": 1022, "endPos": 1143, "beforeText": "video already can be converted them into structured format. But you still need to be able to know.\n\n[SLIDE DESCRIPTION]\nCharacteristics of Data Sets. ", "extractionText": "Dimensionality. Curse of Dimensionality. Sparsity. Only presence counts. Resolution. Patterns depend on the scale. Later.", "afterText": "\n\n[TRANSCRIPT - 111:58]\nSo we have different kind of characteristic of our data dimension we mentioned before. Sparsity comes from a key word called s", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Characteristics of Data Sets</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Key characteristics of data sets include dimensionality (and the &#x27;Curse of Dimensionality&#x27;), sparsity (where only the presence of data matters), and resolution (where patterns depend on the scale).</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data can have many dimensions, can be sparse (mostly empty), and its patterns can change depending on how closely you look (resolution).</span>}</div>"}, {"index": 4, "class": "key_concept", "text": "Sparsity comes from a key word called sparse. Sparse means very few. Like what we say that if you have the record in e-commerce store, like in Amazon. Because they have million of the records. But then you probably only buy 10 books before. So make your data in the million then become very sparse.", "color": "#D2E3FC", "startPos": 1254, "endPos": 1552, "beforeText": "n. Patterns depend on the scale. Later.\n\n[TRANSCRIPT - 111:58]\nSo we have different kind of characteristic of our data dimension we mentioned before. ", "extractionText": "Sparsity comes from a key word called sparse. Sparse means very few. Like what we say that if you have the record in e-commerce store, like in Amazon. Because they have million of the records. But then you probably only buy 10 books before. So make your data in the million then become very sparse.", "afterText": " So data are sparse. And sometimes in certain place, we will also talking about the resolution. And that part about sparsity, how to solving them, how", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Sparsity</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Sparsity in data means that there are very few data points present relative to the total possible data points, often seen in large datasets where most entries are empty or zero.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Sparse data is like a nearly empty spreadsheet, where most cells have no information.</span>}</div>"}, {"index": 5, "class": "practical_insight", "text": "And that part about sparsity, how to solving them, how to do the resolution, some of them will be in classification, some of them will be in the text mining.", "color": "#C8E6C9", "startPos": 1648, "endPos": 1805, "beforeText": "make your data in the million then become very sparse. So data are sparse. And sometimes in certain place, we will also talking about the resolution. ", "extractionText": "And that part about sparsity, how to solving them, how to do the resolution, some of them will be in classification, some of them will be in the text mining.", "afterText": "\n\n[SLIDE DESCRIPTION]\nTypes of Data Sets. Data Matrix. Document Data. Transaction Data.\n\n[TRANSCRIPT - 112:58]\nWe want to talk about different type of", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Related Fields</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Sparsity and Resolution</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Techniques for handling data sparsity and resolution are often found in fields like classification and text mining.</span>}</div>"}, {"index": 6, "class": "key_concept", "text": "Data Matrix. Document Data. Transaction Data.", "color": "#D2E3FC", "startPos": 1847, "endPos": 1892, "beforeText": ", how to do the resolution, some of them will be in classification, some of them will be in the text mining.\n\n[SLIDE DESCRIPTION]\nTypes of Data Sets. ", "extractionText": "Data Matrix. Document Data. Transaction Data.", "afterText": "\n\n[TRANSCRIPT - 112:58]\nWe want to talk about different type of the data set. We have the data matrix, document data, transaction data. So data matrix", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Types of Data Sets</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Common types of data sets include Data Matrix, Document Data, and Transaction Data.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data can be organized in different ways, such as a matrix (like a table), as documents (like text files), or as transaction records (like purchase histories).</span>}</div>"}, {"index": 7, "class": "key_concept", "text": "Data Matrix. If each object has the same fixed set of numeric attributes. Price, Sells, # Reviews, # Readers. Book 1: 350, 1200, 20, 8. Book 2: 250, 21000, 36, 5. Book 3: 1200, 12000, 3, 5. Book 4: 350, 9000, 10, 7. Book 5: 450, 700, 1, 0. @Yi-Shin Chen, Data Mining. 29. Into a meaningful number. Okay, they can become data metric. And then we allow them to do the ratio operation. They are called data matrix. To make sure all the value inside need to become the ratio data. Okay. If it's not, then right here, they need to be ratio data.", "color": "#D2E3FC", "startPos": 2084, "endPos": 2624, "beforeText": "out different type of the data set. We have the data matrix, document data, transaction data. So data matrix look like this way.\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Data Matrix. If each object has the same fixed set of numeric attributes. Price, Sells, # Reviews, # Readers. Book 1: 350, 1200, 20, 8. Book 2: 250, 21000, 36, 5. Book 3: 1200, 12000, 3, 5. Book 4: 350, 9000, 10, 7. Book 5: 450, 700, 1, 0. @Yi-Shin Chen, Data Mining. 29. Into a meaningful number. Okay, they can become data metric. And then we allow them to do the ratio operation. They are called data matrix. To make sure all the value inside need to become the ratio data. Okay. If it&#x27;s not, then right here, they need to be ratio data.", "afterText": "\n\n[SLIDE DESCRIPTION]\nDocument Data. Usually unstructured and textual. Each document can be converted as a term vector. The value of each component is", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Data Matrix</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A data structure where each object has the same fixed set of numeric attributes, and all values are ratio data.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">A table where each row is an item and each column is a measurable characteristic (like price or rating), and all values are numbers that can be used in calculations.</span>}</div>"}, {"index": 8, "class": "key_concept", "text": "Document Data. Usually unstructured and textual. Each document can be converted as a term vector. The value of each component is the number of times the corresponding term in the document. Before 2013. @Yi-Shin Chen, Data Mining. 33.", "color": "#D2E3FC", "startPos": 2646, "endPos": 2879, "beforeText": "To make sure all the value inside need to become the ratio data. Okay. If it&#x27;s not, then right here, they need to be ratio data.\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Document Data. Usually unstructured and textual. Each document can be converted as a term vector. The value of each component is the number of times the corresponding term in the document. Before 2013. @Yi-Shin Chen, Data Mining. 33.", "afterText": "\n\n[TRANSCRIPT - 113:48]\nAnd the document data is a part that we will talking about later because before 2013, this is before 2013. Okay. And the peopl", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Document Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Usually unstructured and textual data, where each document can be converted into a term vector representing the frequency of terms.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Text-based information (like articles or emails) that can be represented numerically by counting how often specific words appear.</span>}</div>"}, {"index": 9, "class": "key_concept", "text": "term vector. So each one of them are become vector. So why vector? Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.", "color": "#D2E3FC", "startPos": 3310, "endPos": 3542, "beforeText": "t, for every document, utilize those important keyword, we got some number, occurrence of the number for that keyword. We generate a something called ", "extractionText": "term vector. So each one of them are become vector. So why vector? Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.", "afterText": "\n\n[TRANSCRIPT - 114:48]\nBut that is way we try to working on that before 2013. After 2013, how we try to do that? We will talking about that that in t", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Term Vector</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A vector representation of a document where each component represents the occurrence count of a specific term (keyword) within that document.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">A list of numbers representing a document, where each number shows how many times a particular word appears in that document.</span>}</div>"}, {"index": 10, "class": "practical_insight", "text": "Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.", "color": "#C8E6C9", "startPos": 3377, "endPos": 3542, "beforeText": " number, occurrence of the number for that keyword. We generate a something called term vector. So each one of them are become vector. So why vector? ", "extractionText": "Because in computer science, vector is the easiest way for us to operate. We convert them to vector. So in other word, every number right here are become ratio data.", "afterText": "\n\n[TRANSCRIPT - 114:48]\nBut that is way we try to working on that before 2013. After 2013, how we try to do that? We will talking about that that in t", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Vector Representation</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Converting data into vectors simplifies operations and analysis in computer science.</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
