@@ -196,7 +196,7 @@ In Kaggle remember to have these `Datasets` added into your notebook:
 
 ---
 
-## 8. Download a pre-trained Word2Vec model
+### 8. Download a pre-trained Word2Vec model
 If you are using a Jupyter Notebook or Google Colab, you can download the Google News Vector:
 [Google word2vec](https://code.google.com/archive/p/word2vec/)
 
