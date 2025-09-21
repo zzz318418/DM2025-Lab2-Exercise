@@ -148,14 +148,32 @@ pip3 install -r requirements.txt
 
 #### (Alternative) If you are using Kaggle or Colab   
 
-You can specify each package in the `requirements.txt` manually like this
+You can specify each package in the `requirements.txt` manually like this for `Google Colab`:
 ```bash
 !pip3 install python-dotenv==1.1.1 google-genai==1.33.0 langextract==1.0.9 gensim==4.3.3 tensorflow==2.20.0 tensorflow-hub==0.16.1 keras==3.11.3 ollama==0.5.3 langchain==0.3.27 langchain_community==0.3.29 langchain_core==0.3.75 langchain-google-genai==2.1.10 beautifulsoup4==4.13.5 chromadb==1.0.20 gradio==5.44.1 jupyter==1.1.1 scikit-learn==1.7.1 pandas==2.3.2 numpy==1.26.4 matplotlib==3.10.6 plotly==6.3.0 seaborn==0.13.2 nltk==3.9.1 umap-learn==0.5.9.post2 pymupdf==1.26.4
 ```
-or like this
+
+For `Kaggle` the dependencies versions changed in order to work in their container.
+
+Most of the dependencies are already installed, just run this in a kaggle cell:
 ```bash
-!pip3 install --upgrade python-dotenv google-genai langextract gensim tensorflow tensorflow-hub keras ollama langchainlangchain_community langchain_core langchain-google-genai beautifulsoup4 chromadb gradio jupyter scikit-learn pandas numpy matplotlib plotlyseaborn nltk umap-learn pymupdf
+!pip3 install chromadb==1.1.0 langchain_community==0.3.29 langchain_google_genai==2.1.12 langextract==1.0.9 ollama==0.5.4 pymupdf==1.26.4
 ```
+or run the whole list of dependencies as how they were at the time we tested the kaggle environment:
+```bash
+!pip3 install python-dotenv==1.1.1 google-genai==1.21.1 langextract==1.0.9 gensim==4.3.3 tensorflow==2.18.0 tensorflow-hub==0.16.1 keras==3.8.0 ollama==0.5.4 langchain==0.3.27 langchain_community==0.3.29 langchain_core==0.3.76 langchain-google-genai==2.1.12 beautifulsoup4==4.13.4 chromadb==1.1.0 gradio==5.31.0  scikit-learn==1.2.2 pandas==2.2.3 numpy==1.26.4 matplotlib==3.7.2 plotly==5.24.1 seaborn==0.12.2 nltk==3.9.1 umap-learn==0.5.7 pymupdf==1.26.4
+```
+
+In Kaggle remember to have these `Datasets` added into your notebook:
+
+[Lab 2 necessary data from repo](https://www.kaggle.com/datasets/didiersalazar/lab2-initial-data)
+
+(Explained in the next section)
+[Google News Vectors](https://www.kaggle.com/datasets/didiersalazar/google-news-vectors)
+
+![kaggle_input](./pics/kaggle_input.png)
+
+
 Note: In Kaggle/Colab, Python version may differ (e.g., 3.10). Some packages could behave differently.
 
 ---
@@ -218,10 +236,38 @@ In the same way as in Lab 1, select **Python (dm2025lab)** as the notebook kerne
 #### (Alternative) Run in Kaggle
 If you cannot set up Python locally:  
 Create an account: https://www.kaggle.com/  
-Go to: https://www.kaggle.com/kernels → "New Notebook"  
-Run the test script (next section's code).  
+Copy our tested Kaggle Master Notebook for Lab 2: [DM2025-Lab2-Master | Kaggle](https://www.kaggle.com/code/didiersalazar/dm2025-lab2-master)
 
-![kaggle](./pics/pic8ann1.png)
+It should look like this after you copy it: 
+
+![kaggle](./pics/kaggle_master.png)
+
+Like shown in the image above, you need to run Kaggle with `T4 GPUs`, and also select `Persistence of Variables and Files` so your data does not get reset everytime you restart a session.
+
+#### (Alternative) Run in Google Colab
+With your google account enter colab:  
+Create an account: https://colab.research.google.com/  
+
+We provide a link where you can copy the notebook of our `DM2025-Lab2-Master.ipynb` ready to run in colab: [Lab 2 Master Notebook in Google Colab](https://colab.research.google.com/drive/1bzYqhCJm1JRelPSUxf328RhJT-BC9cXc?usp=sharing)
+
+Run Google Colab with `T4 GPU`, follow these steps:
+
+![colab](./pics/colab_gpu.png)
+
+![colab_2](./pics/colab_gpu_2.png)
+
+Run the setup cells first in the beginning of the notebook. The environment was tested beforehand and you should be able to run successfully all the material. If there is any problem please contact the TAs.
+
+Just remember that google colab does not save any new data directly, every time you open the session you will need to run the cells in the beginning to get the initial data/material.
+
+So, if you would like to save your outputs you can connect colab to your drive in this way:
+```python
+from google.colab import drive
+drive.mount('/content/gdrive')
+```
+Run the code and authenticate your account, after that you can change the directories inside the notebook to your folder in google drive to save any outputs/results from the lab if you would like to have them. 
+
+If you are interested you can check the following tutorial: [How to Read Dataset in Google Colab from Google Drive](https://www.youtube.com/watch?v=Gvwuyx_F-28)
 
 ---
 ### 11. Test Your Environment
