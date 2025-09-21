@@ -17,7 +17,7 @@ This document provides detailed instructions for setting up the environment requ
 Please make sure you have the following installed:
 
 * **Python 3.11.0 (recommended)**
-* **uv (Python virtual environment manager)**
+* **uv (Python virtual environment manager)**: [UV Tutorial Video](https://www.youtube.com/watch?v=6pttmsBSi8M&t=918s)
 * **Git, GitHub account, *GitHub Desktop (optional)*:** [Tutorial Link for Git, GitHub & GitHub Desktop](https://www.youtube.com/watch?v=8Dd7KRpKeaE)
 * **Jupyter Notebook**
 * ***VS Code (optional)***
@@ -106,6 +106,8 @@ Replace \<link you copied in the previous step\> with the URL link to your own f
 
 ---
 ### 5. Install uv
+[UV Tutorial Video](https://www.youtube.com/watch?v=6pttmsBSi8M&t=918s)
+
 In terminal or PowerShell:
 
 ```bash
@@ -146,16 +148,27 @@ After you follow the tutorial you should be able to install everything like this
 pip3 install -r requirements.txt
 ```
 
-#### (Alternative) If you are using Kaggle or Colab   
+#### (Alternative) If you are using Google Colab   
 
-You can specify each package in the `requirements.txt` manually like this for `Google Colab`:
+**`The link to a Google Colab Notebook already tested is shared in section 10. Run Notebook`**.
+
+In said notebook we specify each package in the `requirements.txt` manually like this for `Google Colab`:
 ```bash
 !pip3 install python-dotenv==1.1.1 google-genai==1.33.0 langextract==1.0.9 gensim==4.3.3 tensorflow==2.20.0 tensorflow-hub==0.16.1 keras==3.11.3 ollama==0.5.3 langchain==0.3.27 langchain_community==0.3.29 langchain_core==0.3.75 langchain-google-genai==2.1.10 beautifulsoup4==4.13.5 chromadb==1.0.20 gradio==5.44.1 jupyter==1.1.1 scikit-learn==1.7.1 pandas==2.3.2 numpy==1.26.4 matplotlib==3.10.6 plotly==6.3.0 seaborn==0.13.2 nltk==3.9.1 umap-learn==0.5.9.post2 pymupdf==1.26.4
 ```
+After running the cell and installing the libraries, in the output you might see a `warning`.
 
-For `Kaggle` the dependencies versions changed in order to work in their container.
+**You need to restart the runtime in order to use newly installed library versions.** 
 
-Most of the dependencies are already installed, just run this in a kaggle cell:
+Press the **"`RESTART RUNTIME`"** button. 
+
+#### (Alternative) If you are using Kaggle
+
+**`The link to a Kaggle Notebook already tested is shared in section 10. Run Notebook`**.
+
+Inside said notebook in `Kaggle` the dependencies versions changed in order to work in their container.
+
+Most of the dependencies are already installed, just run this kaggle cell there:
 ```bash
 !pip3 install chromadb==1.1.0 langchain_community==0.3.29 langchain_google_genai==2.1.12 langextract==1.0.9 ollama==0.5.4 pymupdf==1.26.4
 ```
@@ -166,7 +179,7 @@ or run the whole list of dependencies as how they were at the time we tested the
 
 In Kaggle remember to have these `Datasets` added into your notebook:
 
-[Lab 2 necessary data from repo](https://www.kaggle.com/datasets/didiersalazar/lab2-initial-data)
+[Lab 2 necessary data from the GitHub Repository](https://www.kaggle.com/datasets/didiersalazar/lab2-initial-data)
 
 (Explained in the next section)
 [Google News Vectors](https://www.kaggle.com/datasets/didiersalazar/google-news-vectors)
@@ -174,7 +187,7 @@ In Kaggle remember to have these `Datasets` added into your notebook:
 ![kaggle_input](./pics/kaggle_input.png)
 
 
-Note: In Kaggle/Colab, Python version may differ (e.g., 3.10). Some packages could behave differently.
+`Note: In Kaggle/Colab, Python version may differ (e.g., 3.10). Some packages could behave differently.`
 
 ---
 
@@ -447,12 +460,14 @@ You should be getting the following information if the installation was correct:
 
 ![ollama_info.png](./pics/ollama_info.png)
 
-We will be using 3 Open-source LLMs during this lab, for that it is recommended to have at least **4 GB of VRAM, 16 GB of RAM and multi-core processor** to run them in the **most optimal way**, although they can be run with less computing resources, but they will be slower in response.
+We will be using 4 Open-source LLMs here, for that it is recommended to have at least **4 GB of VRAM, 16 GB of RAM and multi-core processor** to run them in the **most optimal way**, although they can be run with less computing resources, but they will be slower in response.
 To download and install them you will need to type the following commands in the terminal: 
-- ollama run gemma3:4b-it-qat       
-    - It is a quantized version of gemma3:4b with **4 billion parameters**, we select this due to it being more efficient in consumer grade machines. We will be using this one for multi-modal prompting with images (you can also use it for text-only prompts).
+- ollama run gemma3:4b       
+    - It is a version with **4 billion parameters**. We will be using this one for multi-modal prompting with images, and for some advanced text-based tasks.
 - ollama run gemma3:270m      
-    - We will use this for text prompting, it is a small LLM model of **270 million parameters.**
+    - We will use this for simple text prompting, it is a small LLM model of **270 million parameters**.
+- ollama run llama3.2:1b  
+    - We will use this for tool calling, it is a version of **1 billion parameters**.
 - ollama run embeddinggemma     
     - Model with **300 million parameters.** We will use this model to obtain text embeddings from our data.
 
@@ -484,8 +499,13 @@ process = subprocess.Popen("ollama serve", shell=True) #runs on a different thre
 ```
 
 ```python
-#Download model gemma3:4b-it-qat
-!ollama pull gemma3:4b-it-qat
+#Download model gemma3:4b
+!ollama pull gemma3:4b
+```
+
+```python
+#Download model llama3.2:1b
+!ollama pull llama3.2:1b
 ```
 
 ```python
