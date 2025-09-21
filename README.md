@@ -169,6 +169,11 @@ Press the **"`RESTART RUNTIME`"** button.
 Inside said notebook in `Kaggle` the dependencies versions changed in order to work in their container.
 
 Most of the dependencies are already installed, just run this kaggle cell there:
+This is the most reliable command so far
+```bash
+!pip3 install chromadb langchain_community langchain_google_genai langextract ollama pymupdf
+```
+or run the following:
 ```bash
 !pip3 install chromadb==1.1.0 langchain_community==0.3.29 langchain_google_genai==2.1.12 langextract==1.0.9 ollama==0.5.4 pymupdf==1.26.4
 ```
@@ -487,9 +492,24 @@ After finishing you can verify each model by asking something in a prompt in the
 
 ##### 12.2.1 Using Ollama on the cloud (Kaggle | Google Colab):
 
-Run the notebooks with `GPU`, both Kaggle and Google Colab offer T4 GPUs to run notebooks. Kaggle offers 30 hrs of GPU usage every week, while Google Colab is dynamic, depends on the current available resources. Kaggle can offer more Quota if you link your account to Colab Pro.  
+We also provide a tested set of notebooks to run this additional material in Kaggle and Colab: 
+
+[Kaggle | LLM Master Examples with Ollama](https://www.kaggle.com/code/didiersalazar/dm2025-lab2-optional-ollama)
+
+[Colab | LLM Master Examples with Ollama](https://colab.research.google.com/drive/1s8Epv5pSltFkYOwbsvHrsQuIX---R7Yi?usp=sharing)
+
+`Enter the links, copy and run them accordingly.`
+
+**Note that for Kaggle because the notebook size is greater than 1 Mb we cannot save a version there, only a draft, so if needed just download after you finish trying the notebook out.**
+
+Run the notebooks with `GPU`, both Kaggle and Google Colab offer `T4 GPUs` to run notebooks. Kaggle offers 30 hrs of GPU usage every week, while Google Colab is dynamic, depends on the current available resources. Kaggle can offer more Quota if you link your account to Colab Pro.  
 
 After this you need to run the following on the top of your notebook: 
+
+```python
+# This command installs pciutils, necessary to locate the NVIDIA GPUs in the cloud container
+!apt-get install pciutils -y -qq > /dev/null 2>&1 
+```
 
 ```python
 #Download ollama
