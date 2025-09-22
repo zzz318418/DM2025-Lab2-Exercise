@@ -129,15 +129,30 @@ This creates a .venv folder inside the project.
 ### 7. Install the Dependent Libraries
 
 Under project folder:  `DM2025-Lab2-Exercise`  
-#### Install Libraries
+
+#### (Recommended) Install Libraries with the `uv sync` command 
+
 ```bash
-uv add -r requirements.txt
+uv sync
 ```
-This installs all required Python packages specified in the `requirements.txt` file needed to run our lab.   
-You can also install extra libraries if needed.  
+This will install all the libraries with the same version as the TAs' environment. 
+
+If you encounter version dependency issues, please run the following command:
+
+```bash
+uv add python-dotenv google-genai langextract gensim tensorflow tensorflow-hub keras ollama langchain langchain_community langchain_core langchain-google-genai beautifulsoup4 chromadb gradio scikit-learn pandas numpy matplotlib plotly seaborn nltk umap-learn pymupdf
+```
+
+**You can also install extra libraries** if needed, like this:  
 ```bash
 uv add <library_name>
 ```
+
+#### (Alternative) Install Libraries with the `requirements.txt` file 
+```bash
+uv add -r requirements.txt
+```
+This installs all required Python packages specified in the `requirements.txt` file with the specified versions tested by the TAs, everything needed to run our lab.   
 
 
 #### (Alternative) Using Pip and manual venv with VS Code
@@ -578,6 +593,12 @@ Make sure your repository must contains 2 notebooks and your competition report 
 1. `DM2025-Lab2-Master.ipynb` from [DM Lab 2 Master](https://github.com/difersalest/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Master.ipynb)
 2. `DM2025-Lab2-Homework.ipynb` from [DM Lab 2 Homework](https://github.com/difersalest/DM2025-Lab2-Exercise/blob/main/DM2025-Lab2-Homework.ipynb)
 3. `competition_report.pdf` (the name of the file is arbitrary, but it must say report).
+
+This lab has 3 phases/parts and one optional notebook, these are some recommendations when running the lab:
+- **Phase 1 exercises:** Need GPU for training the models explained in that part, if you don't have a GPU in your laptop it is recommended to run in Colab or Kaggle for a faster experience, although with CPU they can still be solved but with a slower execution.
+- **Phase 2 exercises:** We use Gemini's API so everything can be run with only CPU without a problem.
+- **Phase 3 exercises:** For the competition you will probably need GPU to train your models, so it is recommended to use Colab or Kaggle if you don't have a laptop with a dedicated GPU.
+- **Optional Ollama Notebook:** You need GPU, at least 4GB of VRAM with 16 GB of RAM to run the local open-source LLM models. 
 
 ![deadline](./pics/lab2_deadlines.png)
 
