@@ -2,5 +2,6 @@ __pycache__
 .DS_Store
 config/.env
 .venv/
-GoogleNews/GoogleNews-vectors-negative300.bin
-GoogleNews/GoogleNews-vectors-negative300.bin.gz
+*.bin
+*.gz
+
