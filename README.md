@@ -2,7 +2,7 @@
 
 Hi everyone,
 
-We will have our second lab session (for Q&A) on **October 20th (Monday)** at **9:00 AM** via our [YouTube Stream](https://www.youtube.com/@NTHU_ISA5810_DataMining)/**Classroom**. Please be on time.
+Our Lab 2 officially accepts submissions starting on **October 20th (Monday)** so please be sure to start working on the exercises with time.
 
 The Lab tutorial video will be launched on [YouTube Channel](https://www.youtube.com/@NTHU_ISA5810_DataMining) before **October 20th**.
 
