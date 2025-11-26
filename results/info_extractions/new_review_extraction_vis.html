@@ -1,0 +1,235 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Se7en 
+-Movie Review- 
+5/5 
+David Fincher’s “Se7en” is <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">one of the most sinisterly dismal and 
+disturbing films of all time</span>, but simultaneously, it has an 
+<span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">eminently memorable and powerful message</span>. Standing out from 
+other crime movies, its <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">ingenious concept</span> <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">keeps us on the edge 
+of our seat throughout the whole film</span>, and <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">has us stunned after 
+what may just be one of the most sensational endings in the 
+history of cinema</span>.  
+Se7en follows two detectives, Somerset(Morgan Freeman) and 
+Mills(Brad Pitt) on their hunt for a deranged serial killer. The 
+reoccurring murders follow a pattern and an idea - they are 
+committed according to the 7 deadly sins: Sloth, Gluttony, 
+Greed, Lust, Envy, Pride and Wrath. This already denotes that 
+the killer wishes to send a message through these acts, they have 
+a meaning and a purpose. Throughout the film, we observe how 
+calculated and <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">hauntingly intelligent the murderer truly is</span>, as his 
+identity remains anonymous to the other characters as well as 
+the audience until the very end.  
+The concept of the film is <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">very interesting</span>, as it <span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">has the audience wondering which sin the killer will pick next, 
+and how he will represent it</span>. The movie also <span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">has us questioning our own morals and principles</span>, which makes the 
+<span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">plot feel more real</span>, as it raises real questions and feelings. This is haunting because Se7en is an extremely dark 
+cinematic piece, which therefore means that on a certain level, this dark view matches our own reality. The cast is 
+<span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">extraordinary</span> as well, especially Kevin Spacey who plays the killer(whose name is purposely not included in the 
+opening credits), despite his very short appearance, he still manages to <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">make an impact</span>, and he is <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">perhaps the 
+best choice I could think of for the role</span>. 
+Cinematographically, Se7en is <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">quite amazing</span>. Its aesthetic ties in with Fincher’s other films, as the <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">gloomy and 
+bleak atmosphere usually conveys is definitely present here</span>. The plot takes place in an unnamed city which I find 
+<span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">quite interesting</span> because that means it could be anywhere. The <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">haunting darkness remains throughout the whole 
+entire film</span> - except the ending, which is the only brightly lit scene in the whole movie. This <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">jarring choice</span> 
+completely juxtaposes what actually happens in the ending. 
+There is no right way to describe the ending of this film in words, as one must see it themselves to truly 
+understand, but it <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">revolves around the killer finding a way to strongly prove his twisted point and leave an</span> ever-
+lasting mark. <span class="lx-highlight" data-idx="19" style="background-color:#D2E3FC;">The perception of the characters and the ideas of the film that the audience forms while watching is 
+completely turned upside down</span>. It is <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">very poignant</span>, while being <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">extremely clever</span> at the same time. It <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">does not 
+even feel like an ending, because the idea of it remains alive long after watching it</span>. 
+To conclude, Se7en is an <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">outstanding film</span> from many points of view, including plot, cast and cinematography. It 
+<span class="lx-highlight" data-idx="24" style="background-color:#D2E3FC;">has the audience completely captivated and questioning their own morals and thoughts</span>, which is what I believe a 
+good and memorable movie should do - <span class="lx-highlight" data-idx="25" style="background-color:#D2E3FC;">get inside the mind of the audience, captivate them throughout the 
+movie, keep them on the edge of their seat, but also leave them with something to think about after 
+watching it</span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="25" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/26</span> |
+          Pos <span id="posInfo">[70-137]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "one of the most sinisterly dismal and disturbing films of all time", "color": "#C8E6C9", "startPos": 70, "endPos": 137, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nSe7en \n-Movie Review- \n5/5 \nDavid Fincher\u2019s \u201cSe7en\u201d is ", "extractionText": "one of the most sinisterly dismal and \ndisturbing films of all time", "afterText": ", but simultaneously, it has an \neminently memorable and powerful message. Standing out from \nother crime movies, its ingenious concept keeps us on th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Se7en</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">sinisterly dismal and disturbing</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "eminently memorable and powerful message", "color": "#C8E6C9", "startPos": 170, "endPos": 210, "beforeText": " \n-Movie Review- \n5/5 \nDavid Fincher\u2019s \u201cSe7en\u201d is one of the most sinisterly dismal and \ndisturbing films of all time, but simultaneously, it has an \n", "extractionText": "eminently memorable and powerful message", "afterText": ". Standing out from \nother crime movies, its ingenious concept keeps us on the edge \nof our seat throughout the whole film, and has us stunned after \n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Se7en</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">eminently memorable and powerful</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "ingenious concept", "color": "#C8E6C9", "startPos": 255, "endPos": 272, "beforeText": "nd \ndisturbing films of all time, but simultaneously, it has an \neminently memorable and powerful message. Standing out from \nother crime movies, its ", "extractionText": "ingenious concept", "afterText": " keeps us on the edge \nof our seat throughout the whole film, and has us stunned after \nwhat may just be one of the most sensational endings in the \nh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The concept</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">ingenious</span>}</div>"}, {"index": 3, "class": "audience_impact", "text": "keeps us on the edge of our seat throughout the whole film", "color": "#D2E3FC", "startPos": 273, "endPos": 332, "beforeText": "ms of all time, but simultaneously, it has an \neminently memorable and powerful message. Standing out from \nother crime movies, its ingenious concept ", "extractionText": "keeps us on the edge \nof our seat throughout the whole film", "afterText": ", and has us stunned after \nwhat may just be one of the most sensational endings in the \nhistory of cinema.  \nSe7en follows two detectives, Somerset(M", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">suspenseful, engaged</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The concept</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 4, "class": "audience_impact", "text": "has us stunned after what may just be one of the most sensational endings in the history of cinema", "color": "#D2E3FC", "startPos": 338, "endPos": 438, "beforeText": "e and powerful message. Standing out from \nother crime movies, its ingenious concept keeps us on the edge \nof our seat throughout the whole film, and ", "extractionText": "has us stunned after \nwhat may just be one of the most sensational endings in the \nhistory of cinema", "afterText": ".  \nSe7en follows two detectives, Somerset(Morgan Freeman) and \nMills(Brad Pitt) on their hunt for a deranged serial killer. The \nreoccurring murders ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">stunned, impressed</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "hauntingly intelligent the murderer truly is", "color": "#C8E6C9", "startPos": 896, "endPos": 940, "beforeText": "that \nthe killer wishes to send a message through these acts, they have \na meaning and a purpose. Throughout the film, we observe how \ncalculated and ", "extractionText": "hauntingly intelligent the murderer truly is", "afterText": ", as his \nidentity remains anonymous to the other characters as well as \nthe audience until the very end.  \nThe concept of the film is very interestin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The murderer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hauntingly intelligent</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "very interesting", "color": "#C8E6C9", "startPos": 1075, "endPos": 1091, "beforeText": "rderer truly is, as his \nidentity remains anonymous to the other characters as well as \nthe audience until the very end.  \nThe concept of the film is ", "extractionText": "very interesting", "afterText": ", as it has the audience wondering which sin the killer will pick next, \nand how he will represent it. The movie also has us questioning our own moral", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The concept of the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">very interesting</span>}</div>"}, {"index": 7, "class": "audience_impact", "text": "has the audience wondering which sin the killer will pick next, and how he will represent it", "color": "#D2E3FC", "startPos": 1099, "endPos": 1192, "beforeText": "\nidentity remains anonymous to the other characters as well as \nthe audience until the very end.  \nThe concept of the film is very interesting, as it ", "extractionText": "has the audience wondering which sin the killer will pick next, \nand how he will represent it", "afterText": ". The movie also has us questioning our own morals and principles, which makes the \nplot feel more real, as it raises real questions and feelings. Thi", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">curiosity, anticipation</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The concept of the film</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 8, "class": "audience_impact", "text": "has us questioning our own morals and principles", "color": "#D2E3FC", "startPos": 1209, "endPos": 1257, "beforeText": " of the film is very interesting, as it has the audience wondering which sin the killer will pick next, \nand how he will represent it. The movie also ", "extractionText": "has us questioning our own morals and principles", "afterText": ", which makes the \nplot feel more real, as it raises real questions and feelings. This is haunting because Se7en is an extremely dark \ncinematic piece", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">introspective, thoughtful</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "plot feel more real", "color": "#C8E6C9", "startPos": 1276, "endPos": 1295, "beforeText": "which sin the killer will pick next, \nand how he will represent it. The movie also has us questioning our own morals and principles, which makes the \n", "extractionText": "plot feel more real", "afterText": ", as it raises real questions and feelings. This is haunting because Se7en is an extremely dark \ncinematic piece, which therefore means that on a cert", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The plot</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">more real</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "extraordinary", "color": "#C8E6C9", "startPos": 1509, "endPos": 1522, "beforeText": "ause Se7en is an extremely dark \ncinematic piece, which therefore means that on a certain level, this dark view matches our own reality. The cast is \n", "extractionText": "extraordinary", "afterText": " as well, especially Kevin Spacey who plays the killer(whose name is purposely not included in the \nopening credits), despite his very short appearanc", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The cast</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">extraordinary</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "make an impact", "color": "#C8E6C9", "startPos": 1695, "endPos": 1709, "beforeText": "vin Spacey who plays the killer(whose name is purposely not included in the \nopening credits), despite his very short appearance, he still manages to ", "extractionText": "make an impact", "afterText": ", and he is perhaps the \nbest choice I could think of for the role. \nCinematographically, Se7en is quite amazing. Its aesthetic ties in with Fincher\u2019s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Kevin Spacey</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">make an impact</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "perhaps the best choice I could think of for the role", "color": "#C8E6C9", "startPos": 1721, "endPos": 1775, "beforeText": "iller(whose name is purposely not included in the \nopening credits), despite his very short appearance, he still manages to make an impact, and he is ", "extractionText": "perhaps the \nbest choice I could think of for the role", "afterText": ". \nCinematographically, Se7en is quite amazing. Its aesthetic ties in with Fincher\u2019s other films, as the gloomy and \nbleak atmosphere usually conveys ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Kevin Spacey</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">best choice</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "quite amazing", "color": "#C8E6C9", "startPos": 1808, "endPos": 1821, "beforeText": "hort appearance, he still manages to make an impact, and he is perhaps the \nbest choice I could think of for the role. \nCinematographically, Se7en is ", "extractionText": "quite amazing", "afterText": ". Its aesthetic ties in with Fincher\u2019s other films, as the gloomy and \nbleak atmosphere usually conveys is definitely present here. The plot takes pla", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Cinematographically, Se7en</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">quite amazing</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "gloomy and bleak atmosphere usually conveys is definitely present here", "color": "#C8E6C9", "startPos": 1880, "endPos": 1951, "beforeText": "he \nbest choice I could think of for the role. \nCinematographically, Se7en is quite amazing. Its aesthetic ties in with Fincher\u2019s other films, as the ", "extractionText": "gloomy and \nbleak atmosphere usually conveys is definitely present here", "afterText": ". The plot takes place in an unnamed city which I find \nquite interesting because that means it could be anywhere. The haunting darkness remains throu", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The atmosphere</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">gloomy and bleak</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "quite interesting", "color": "#C8E6C9", "startPos": 2007, "endPos": 2024, "beforeText": "\u2019s other films, as the gloomy and \nbleak atmosphere usually conveys is definitely present here. The plot takes place in an unnamed city which I find \n", "extractionText": "quite interesting", "afterText": " because that means it could be anywhere. The haunting darkness remains throughout the whole \nentire film - except the ending, which is the only brigh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The plot</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">quite interesting</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "haunting darkness remains throughout the whole entire film", "color": "#C8E6C9", "startPos": 2070, "endPos": 2129, "beforeText": "veys is definitely present here. The plot takes place in an unnamed city which I find \nquite interesting because that means it could be anywhere. The ", "extractionText": "haunting darkness remains throughout the whole \nentire film", "afterText": " - except the ending, which is the only brightly lit scene in the whole movie. This jarring choice \ncompletely juxtaposes what actually happens in the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">haunting darkness</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "jarring choice", "color": "#C8E6C9", "startPos": 2213, "endPos": 2227, "beforeText": "e. The haunting darkness remains throughout the whole \nentire film - except the ending, which is the only brightly lit scene in the whole movie. This ", "extractionText": "jarring choice", "afterText": " \ncompletely juxtaposes what actually happens in the ending. \nThere is no right way to describe the ending of this film in words, as one must see it t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">jarring choice</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "revolves around the killer finding a way to strongly prove his twisted point and leave an everlasting mark", "color": "#C8E6C9", "startPos": 2416, "endPos": 2505, "beforeText": "appens in the ending. \nThere is no right way to describe the ending of this film in words, as one must see it themselves to truly \nunderstand, but it ", "extractionText": "revolves around the killer finding a way to strongly prove his twisted point and leave an", "afterText": " ever-\nlasting mark. The perception of the characters and the ideas of the film that the audience forms while watching is \ncompletely turned upside do", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">twisted point and leave an everlasting mark</span>}</div>"}, {"index": 19, "class": "audience_impact", "text": "The perception of the characters and the ideas of the film that the audience forms while watching is completely turned upside down", "color": "#D2E3FC", "startPos": 2526, "endPos": 2657, "beforeText": "themselves to truly \nunderstand, but it revolves around the killer finding a way to strongly prove his twisted point and leave an ever-\nlasting mark. ", "extractionText": "The perception of the characters and the ideas of the film that the audience forms while watching is \ncompletely turned upside down", "afterText": ". It is very poignant, while being extremely clever at the same time. It does not \neven feel like an ending, because the idea of it remains alive long", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confusion, surprise</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "very poignant", "color": "#C8E6C9", "startPos": 2665, "endPos": 2678, "beforeText": "ting mark. The perception of the characters and the ideas of the film that the audience forms while watching is \ncompletely turned upside down. It is ", "extractionText": "very poignant", "afterText": ", while being extremely clever at the same time. It does not \neven feel like an ending, because the idea of it remains alive long after watching it. \n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">very poignant</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "extremely clever", "color": "#C8E6C9", "startPos": 2692, "endPos": 2708, "beforeText": "f the characters and the ideas of the film that the audience forms while watching is \ncompletely turned upside down. It is very poignant, while being ", "extractionText": "extremely clever", "afterText": " at the same time. It does not \neven feel like an ending, because the idea of it remains alive long after watching it. \nTo conclude, Se7en is an outst", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">extremely clever</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "does not even feel like an ending, because the idea of it remains alive long after watching it", "color": "#C8E6C9", "startPos": 2730, "endPos": 2825, "beforeText": "film that the audience forms while watching is \ncompletely turned upside down. It is very poignant, while being extremely clever at the same time. It ", "extractionText": "does not \neven feel like an ending, because the idea of it remains alive long after watching it", "afterText": ". \nTo conclude, Se7en is an outstanding film from many points of view, including plot, cast and cinematography. It \nhas the audience completely captiv", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">idea of it remains alive long after watching it</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "outstanding film", "color": "#C8E6C9", "startPos": 2853, "endPos": 2869, "beforeText": "lever at the same time. It does not \neven feel like an ending, because the idea of it remains alive long after watching it. \nTo conclude, Se7en is an ", "extractionText": "outstanding film", "afterText": " from many points of view, including plot, cast and cinematography. It \nhas the audience completely captivated and questioning their own morals and th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Se7en</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">outstanding</span>}</div>"}, {"index": 24, "class": "audience_impact", "text": "has the audience completely captivated and questioning their own morals and thoughts", "color": "#D2E3FC", "startPos": 2941, "endPos": 3025, "beforeText": "mains alive long after watching it. \nTo conclude, Se7en is an outstanding film from many points of view, including plot, cast and cinematography. It \n", "extractionText": "has the audience completely captivated and questioning their own morals and thoughts", "afterText": ", which is what I believe a \ngood and memorable movie should do - get inside the mind of the audience, captivate them throughout the \nmovie, keep them", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">captivated, thought-provoking</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 25, "class": "audience_impact", "text": "get inside the mind of the audience, captivate them throughout the movie, keep them on the edge of their seat, but also leave them with something to think about after watching it", "color": "#D2E3FC", "startPos": 3091, "endPos": 3271, "beforeText": "has the audience completely captivated and questioning their own morals and thoughts, which is what I believe a \ngood and memorable movie should do - ", "extractionText": "get inside the mind of the audience, captivate them throughout the \nmovie, keep them on the edge of their seat, but also leave them with something to think about after \nwatching it", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engaged, thought-provoking, on edge</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
