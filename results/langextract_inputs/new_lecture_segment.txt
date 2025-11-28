@@ -1,0 +1,14 @@
+# LECTURE ANALYSIS: Data Sets, Big Data vs Data Mining
+## Video Segment: 3600s - 3780s
+
+[SLIDE DESCRIPTION]
+The slide defines Big Data as being characterized by Volume, Velocity, and Variety (the 3Vs), and notes the challenges these characteristics pose to traditional data processing.
+
+[TRANSCRIPT - 01:00:05]
+Okay, so what is Big Data? We talk about 3 Vs: Volume, Velocity, and Variety. Volume is the sheer amount of data. Velocity is how fast it comes in, and Variety means it comes in many different forms. The problem is Volume and Variety are huge hurdles for standard data mining.
+
+[SLIDE DESCRIPTION]
+The slide contrasts Big Data and Data Mining: Big Data focuses on infrastructure and handling sheer size, while Data Mining focuses on finding patterns and insights within data.
+
+[TRANSCRIPT - 01:01:45]
+Big Data is mainly an infrastructure problem—how do you even store and process terabytes of data? Data Mining is an analysis problem—what can we actually extract from this mass of data? Don't confuse the two.
